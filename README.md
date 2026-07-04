@@ -32,6 +32,19 @@ scotthiett@Scotts-MacBook-Pro sqlite.beam % escript sqlite.escript
   Headache | The Head Hurts but the Heart Knows the Truth
 
   Type SQL (a trailing ; is optional). Dot-commands: .tables  .schema  .help  .quit
-  
+sqlite> SELECT * FROM album
+  id | title | artist_id
+  ----------------------
+  1 | Honey, I'd Lie To You | 1
+  2 | Much Love | 2
+  3 | The Head Hurts but the Heart Knows the Truth | 3
+
+sqlite> SELECT * FROM album JOIN artist ON album.artist_id = artist.id
+  id | title | artist_id | id | name
+  ----------------------------------
+  1 | Honey, I'd Lie To You | 1 | 1 | The Ariston
+  2 | Much Love | 2 | 2 | Microwave
+  3 | The Head Hurts but the Heart Knows the Truth | 3 | 3 | Headache
+
 sqlite>
 ```
