@@ -48,3 +48,7 @@ sqlite> SELECT * FROM album JOIN artist ON album.artist_id = artist.id
 
 sqlite>
 ```
+
+## other notes
+
+the 2core ir is in `sqlite.ir`. the erlang core file is 246MB, so it's gzipped as `sqlite.core.gz`
